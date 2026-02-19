@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floods Prediction</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            color: #8dc63f; /* Lime green from image */
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8dc63f;
+        }
+
+        /* Hero Section with Background */
+        .hero {
+            position: relative;
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1547683905-f686c993aae5?q=80&w=2070&auto=format&fit=crop');
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .content-box {
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.4); /* Subtle overlay for text readability */
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        h2.intro-title {
+            color: #8dc63f;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            text-align: justify;
+            color: #e0e0e0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                margin-top: 1rem;
+            }
+            .nav-links li {
+                margin: 0 10px;
+            }
+        }
+    </style>
+    <form action="/predict" method="POST">
+    <button type="submit">Predict Floods</button>
+</form>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Floods Prediction</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="intro.html">Predict Flood</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="content-box">
+            <h2 class="intro-title">Introduction</h2>
+            <p class="intro-text">
+                Flood forecasting is the use of forecasted precipitation and streamflow data in rainfall-runoff and streamflow routing models to forecast flow rates and water levels for periods ranging from a few hours to days ahead, depending on the size of the watershed or river basin. 
+                <br><br>
+                Flood forecasting is an important component of flood warning, where the distinction between the two is that the outcome of flood forecasting is a set of forecast time-profiles of channel flows or river levels at various locations, while "flood warning" is the task of making use of these forecasts to tell decisions on warnings of floods. Real-time flood forecasting at regional area can be done in seconds by using the technology of artificial neural network. Effective real-time flood forecasting models could be useful for early warning and disaster prevention.
+            </p>
+        </div>
+    </header>
+
+</body>
+</html>
